@@ -72,4 +72,11 @@ public class CalculatorActivity extends AppCompatActivity {
         }
     }
 
+    public void onClickClear(View view)
+    {
+        num = "0";
+        prev_num = 0;
+        numview.setText("0");
+    }
+
 }
