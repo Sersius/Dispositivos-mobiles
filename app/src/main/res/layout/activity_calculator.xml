@@ -16,6 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:gravity="right"
+        android:text="0"
         android:textSize="70sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/curr_num"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <TableRow
             android:layout_width="match_parent"
@@ -183,7 +184,16 @@
                 android:onClick="OnClickOperator"
                 android:text="/"
                 android:textSize="30sp" />
+
         </TableRow>
     </TableLayout>
+
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:text="C"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="378dp" />
 
 </android.support.constraint.ConstraintLayout>

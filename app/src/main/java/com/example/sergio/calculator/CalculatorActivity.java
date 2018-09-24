@@ -19,10 +19,17 @@ public class CalculatorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calculator);
     }
 
-    public void OnClickDigit(View view){
-        Button b = (Button) view;
-        num+=b.getText().toString().charAt(0);
+    private void updateScreen(){
         numview.setText(num);
+    }
+
+    public void OnClickDigit(View view){
+        if(prev_num != ""){
+            updateScreen();
+        }
+        Button b = (Button) view;
+        num += b.getText();
+        updateScreen();
     }
 
     public void OnClickOperator(View view){
@@ -57,6 +64,12 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     public void OnClickDot(View view){
-
+        if  (num.indexOf('.') == -1)
+        {
+            Button b = (Button)view;
+            num += '.';
+            numview.setText(num);
+        }
     }
+
 }
